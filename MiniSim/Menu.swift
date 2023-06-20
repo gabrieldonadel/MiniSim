@@ -42,8 +42,8 @@ class Menu: NSMenu {
         DispatchQueue.global().async {
             do {
                 var devicesArray: [Device] = []
-                try devicesArray.append(contentsOf: self.deviceService.getAndroidDevices())
-                try devicesArray.append(contentsOf: self.deviceService.getIOSDevices())
+                try devicesArray.append(contentsOf: DeviceService.getAndroidDevices())
+                try devicesArray.append(contentsOf: DeviceService.getIOSDevices())
                 self.devices = devicesArray
             } catch {
                 NSAlert.showError(message: error.localizedDescription)

@@ -11,14 +11,14 @@ import AppKit
 
 protocol DeviceServiceProtocol {
     func launchDevice(uuid: String) throws
-    func getIOSDevices() throws -> [Device]
+    static func getIOSDevices() throws -> [Device]
     static func checkXcodeSetup() -> Bool
     func deleteSimulator(uuid: String) throws
     static func clearDerivedData() throws -> String
     
     func launchDevice(name: String, additionalArguments: [String]) throws
     func toggleA11y(device: Device) throws
-    func getAndroidDevices() throws -> [Device]
+    static func getAndroidDevices() throws -> [Device]
     func sendText(device: Device, text: String) throws
     static func checkAndroidSetup() throws -> String
     
@@ -126,7 +126,7 @@ class DeviceService: DeviceServiceProtocol {
 // MARK: iOS Methods
 extension DeviceService {
     
-    private func parseIOSDevices(result: [String]) -> [Device] {
+    static private func parseIOSDevices(result: [String]) -> [Device] {
         var devices: [Device] = []
         var osVersion = ""
         result.forEach { line in
@@ -154,7 +154,7 @@ extension DeviceService {
         return amountCleared ?? ""
     }
     
-    func getIOSDevices() throws -> [Device] {
+    static func getIOSDevices() throws -> [Device] {
         let output = try shellOut(to: ProcessPaths.xcrun.rawValue, arguments: ["simctl", "list", "devices", "available"])
         let splitted = output.components(separatedBy: "\n")
         
@@ -213,7 +213,7 @@ extension DeviceService {
         }
     }
     
-    func getAndroidDevices() throws -> [Device] {
+    static func getAndroidDevices() throws -> [Device] {
         let emulatorPath = try ADB.getEmulatorPath()
         let adbPath = try ADB.getAdbPath()
         let output = try shellOut(to: emulatorPath, arguments: ["-list-avds"])

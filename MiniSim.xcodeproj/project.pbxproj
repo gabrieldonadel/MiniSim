@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7610992D2A3F95850067885A /* MiniSim.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 7610992C2A3F95850067885A /* MiniSim.sdef */; };
+		7610992F2A3F95D90067885A /* ScriptingCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7610992E2A3F95D90067885A /* ScriptingCommands.swift */; };
 		7625140B2992B46D0060A225 /* Pasteboard+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7625140A2992B46D0060A225 /* Pasteboard+utils.swift */; };
 		762CF1E02981968F00099999 /* String+match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762CF1DF2981968F00099999 /* String+match.swift */; };
 		762CF1E42981DE6100099999 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762CF1E32981DE6100099999 /* Device.swift */; };
@@ -70,6 +72,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7610992C2A3F95850067885A /* MiniSim.sdef */ = {isa = PBXFileReference; lastKnownFileType = text; path = MiniSim.sdef; sourceTree = "<group>"; };
+		7610992E2A3F95D90067885A /* ScriptingCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptingCommands.swift; sourceTree = "<group>"; };
 		7625140A2992B46D0060A225 /* Pasteboard+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pasteboard+utils.swift"; sourceTree = "<group>"; };
 		762CF1DF2981968F00099999 /* String+match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+match.swift"; sourceTree = "<group>"; };
 		762CF1E32981DE6100099999 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 		766BD2322981628A0042261B /* MiniSim */ = {
 			isa = PBXGroup;
 			children = (
+				7610992C2A3F95850067885A /* MiniSim.sdef */,
 				768F8ECC2995575B00DFBCDB /* Info.plist */,
 				76F269882A2A40E600424BDA /* Components */,
 				76E5FAD1299BEBD2007987E0 /* MenuItems */,
@@ -244,6 +249,7 @@
 				7630B27B2987207200D8B57D /* Menu.swift */,
 				7645D4C32982CB2B00019227 /* MiniSim.swift */,
 				7645D5002982E6FA00019227 /* main.swift */,
+				7610992E2A3F95D90067885A /* ScriptingCommands.swift */,
 				766BD2372981628C0042261B /* Assets.xcassets */,
 				766BD23C2981628C0042261B /* MiniSim.entitlements */,
 				766BD2392981628C0042261B /* Preview Content */,
@@ -383,6 +389,7 @@
 			files = (
 				766BD23B2981628C0042261B /* Preview Assets.xcassets in Resources */,
 				766BD2382981628C0042261B /* Assets.xcassets in Resources */,
+				7610992D2A3F95850067885A /* MiniSim.sdef in Resources */,
 				765C44C82A2A6C9600FCC159 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +446,7 @@
 				7630B2682985C4CF00D8B57D /* About.swift in Sources */,
 				76630F0C29BDD0C000FB64F9 /* Devices.swift in Sources */,
 				767C761F29B26ED3009B9AEC /* AccessibilityElement.swift in Sources */,
+				7610992F2A3F95D90067885A /* ScriptingCommands.swift in Sources */,
 				76F269872A2A39D100424BDA /* Variables.swift in Sources */,
 				7630B2732986C68000D8B57D /* PaneIdentifier.swift in Sources */,
 				7630B2662985C44A00D8B57D /* Preferences.swift in Sources */,
